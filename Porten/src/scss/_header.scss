@@ -1,0 +1,66 @@
+.header {
+     display: flex;
+     position: fixed;
+     top: 0;
+     left: 0;
+     background-color: #000;
+     z-index: 1000;
+     width: 100%;
+
+     @media (max-width: $bp-1) {
+          display: none;
+     }
+}
+.header__left {
+     width: 60%;
+}
+.header__right {
+     width: 40%;
+}
+.header__list {
+     display: flex;
+     justify-content: center;
+}
+.header_link {
+     padding: 14px 20px;
+     display: block;
+     font-family: $ffPTsans;
+     font-size: 12px;
+     color: #969696;
+     &:hover {
+          color: rgba(202, 184, 82, 0.74);
+     }
+}
+.right-list{
+     position: relative;
+     &::after {
+          content: url(../icons/sharp-log-in.svg);
+          display: block;
+          position: absolute;
+          top: 13px;
+          left: 0;
+     }
+}
+.left-list {
+     position: relative;
+     &::after {
+          content: url(../icons/phone-outline.svg);
+          display: block;
+          position: absolute;
+          top: 13px;
+          left: 0;
+     }
+}
+.list-border {
+     position: relative;
+     &::before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 1px;
+          background-color: #969696;
+          height: 12px;
+          top: 15px;
+          right: 0;
+     }
+}
